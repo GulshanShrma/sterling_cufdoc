@@ -1,0 +1,124 @@
+<html>
+<body>
+<h2>ControllerUtils</h2>
+<h4>This utility class contains methods related to the controllers.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getMashupContext</div>
+<div style="font-size: 15px">The getMashupContext method returns a new instance of mashupContext object. This object is used to call any mashup from the UI.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance for which mashup or mashups will be called</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Bean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setMashupContextIdenitier</div>
+<div style="font-size: 15px">The setMashupContextIdenitier method sets the unique string identifier for the mashup call. Normally, mashupref fulfills the role of a unique identifier. However, there are scenarios when the same mashup gets called twice and we need a way to identify the uniqueness of the calls. This method is used in such scenarios to set the unique identifier value.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>MashupContext for a mashup call</td>
+</tr>
+<tr>
+<td>identifier</td><td>String</td><td>Unique identifier for a mashup context</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getMashupContextIdenitier</div>
+<div style="font-size: 15px">The getMashupContextIdenitier method returns the unique string identifier for the mashup call. Normally, mashupref fulfills the role of a unique identifier. However, there are scenarios when the same mashup gets called twice and we need a way to identify the uniqueness of the calls. This method is used in such scenarios to get the unique identifier value.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>The mashup context object of the mashup</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openScreenInEditor</div>
+<div style="font-size: 15px">The openScreenInEditor method opens a screen in editor.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenId</td><td>String</td><td>ID of a screen to open in editor</td>
+</tr>
+<tr>
+<td>screenInput</td><td>Model</td><td>Initial input for a screen. Also called as editor input</td>
+</tr>
+<tr>
+<td>oldScreen</td><td>Screen</td><td>Optional argument with the old screen instance</td>
+</tr>
+<tr>
+<td>constructorArgs</td><td>Bean</td><td>Optional argument with the constructor arguments for the new screen</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument with any additional options needed to open a screen</td>
+</tr>
+<tr>
+<td>editorId</td><td>String</td><td>Unique ID of the editor</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">continueOpeningInEditor</div>
+<div style="font-size: 15px">The continueOpeningInEditor method continues to open the screen/wizard in the editor using the data passed as input. It should not be called from any place other than inside the 'beforeOpenScreenInEditor' method of the editor.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>data</td><td>Bean</td><td>Same data object passed to the beforeOpenScreenInEditor method of the editor</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

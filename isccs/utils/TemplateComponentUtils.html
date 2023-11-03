@@ -1,0 +1,422 @@
+<html>
+<body>
+<h2>TemplateComponentUtils</h2>
+<h4>This utility class contains methods which are used for handling search screens in a pop-up window.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openUserLookup</div>
+<div style="font-size: 15px">The openUserLookup method gets the targetModel for the widget and opens the User Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UI Event object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search popup needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which can be passed to the User Search screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmUserLookupSelection</div>
+<div style="font-size: 15px">The confirmUserLookupSelection method handles the user lookup selection. It sets the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object that contains the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains parameters sent by the pop-up window, if any. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control that opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openCompetitorLookup</div>
+<div style="font-size: 15px">The openCompetitorLookup method gets the targetModel for the widget and opens the Competitor Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UIEvent object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search pop-up window needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which can be passed to the screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmCompetitorLookupSelection</div>
+<div style="font-size: 15px">The confirmCompetitorLookupSelection method handles the competitor lookup selection. It will set the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object containing the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains parameters sent by the pop-up window, if any. The popup params include the binding object which consists the screen input to the popup, isModal atribute, outputNamespace, screenId of the pop-up, title of the pop-up.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control that opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openOrderLookup</div>
+<div style="font-size: 15px">The openOrderLookup method gets the targetModel for the widget and opens the Order Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UI Event</td><td>UIEvent object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search pop-up window needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which needs to be passed to the screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmOrderLookupSelection</div>
+<div style="font-size: 15px">The confirmOrderLookupSelection method handles the order lookup selection. It will set the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object containing the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains parameters sent by the pop-up window, if any. The popup params include the binding object which consists the screen input to the popup, isModal atribute, outputNamespace, screenId of the pop-up, title of the pop-up.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control that opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openReturnLookup</div>
+<div style="font-size: 15px">The openReturnLookup method gets the targetModel for the widget and opens the Return Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UI Event object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search pop-up window needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which needs to be passed to the screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmReturnLookupSelection</div>
+<div style="font-size: 15px">The confirmReturnLookupSelection method handles the return lookup selection. It will set the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object containing the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains parameters sent by the pop-up window, if any. The popup params include the binding object which consists the screen input to the popup, isModal atribute, outputNamespace, screenId of the pop-up, title of the pop-up.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control that opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openCustomerLookup</div>
+<div style="font-size: 15px">The openCustomerLookup method gets the targetModel for the widget and opens the Customer Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UIEvent object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search pop-up window needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which needs to be passed to the screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmCustomerLookupSelection</div>
+<div style="font-size: 15px">The confirmCustomerLookupSelection method handles the customer lookup selection. It will set the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object containing the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains parameters sent by the pop-up window, if any. The popup params include the binding object which consists the screen input to the popup, isModal atribute, outputNamespace, screenId of the pop-up, title of the pop-up.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control that opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openPriceMatchLookup</div>
+<div style="font-size: 15px">The openPriceMatchLookup method gets the targetModel for the widget and opens the Price Match Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UI Event</td><td>UI Event object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search pop-up window needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which needs to be passed to the screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmPriceMatchLookupSelection</div>
+<div style="font-size: 15px">The confirmPriceMatchLookupSelection method handles the price match lookup selection. It will set the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object containing the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains parameters sent by the pop-up window, if any. The popup params include the binding object which consists the screen input to the popup, isModal atribute, outputNamespace, screenId of the pop-up, title of the pop-up.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control which opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openAlertLookup</div>
+<div style="font-size: 15px">The openAlertLookup method gets the targetModel for the widget and opens the Alert Search screen in a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UIEvent object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the text field from where the search pop-up window needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which needs to be passed to the screen. The attributes which are passed are originatingControlInstance, which is the originating widget and screen instance where the originating widget resides.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmAlertLookupSelection</div>
+<div style="font-size: 15px">The confirmAlertLookupSelection method handles the alert lookup selection. It will set the model on the parent screen to populate fields accordingly.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The current screen.</td>
+</tr>
+<tr>
+<td>action</td><td>String</td><td>The action performed on the screen like APPLY, CLOSE, and so on.</td>
+</tr>
+<tr>
+<td>output</td><td>Model</td><td>The model object containing the output from the pop-up window.</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>The params object contains popup parameters sent by the pop-up window, if any. The popup params include the binding object which consists the screen input to the popup, isModal atribute, outputNamespace, screenId of the pop-up, title of the pop-up.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The originating control that opened the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

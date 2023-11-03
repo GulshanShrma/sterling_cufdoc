@@ -1,0 +1,527 @@
+<html>
+<body>
+<h2>PaginationUtils</h2>
+<h4>This utility class contains methods related to pagination in grids.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getInitialInputForPaginatedGrid</div>
+<div style="font-size: 15px">The getInitialInputForPaginatedGrid method returns the inputJson parameter passed to the grid when pagination was started through startPagination method. This attribute is fetched from the grid store and the application must not modify the returned value. It must be treated as read-only.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getCurrentPageLastRecordForPaginatedGrid</div>
+<div style="font-size: 15px">The getCurrentPageLastRecordForPaginatedGrid method returns the last record from the current page of a paginated grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getLastRecordMapForPaginatedGrid</div>
+<div style="font-size: 15px">The getLastRecordMapForPaginatedGrid method returns the cached last record map of a paginated grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getPagingConfigForGrid</div>
+<div style="font-size: 15px">The getPagingConfigForGrid method returns the _pagingConfig attribute that is stored on a paginated grid. This attribute is fetched from the grid store and the application must not modify the returned value. It must be treated as read-only.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getPageSizeForPaginatedGrid</div>
+<div style="font-size: 15px">The getPageSizeForPaginatedGrid method returns the page size of a paginated grid. When page size is changed from the UI, it is advisable to use the event handler of the beforePageSizeChange event to get the old page size or the new page size.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Number</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getCurrentPageNumberForPaginatedGrid</div>
+<div style="font-size: 15px">The getCurrentPageNumberForPaginatedGrid method returns the page number of the current page of a paginated grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Number</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getPaginationDataFromMashupContext</div>
+<div style="font-size: 15px">The getPaginationDataFromMashupContext method returns the output for a page from a paginated mashup call. Returns null if any of the parameters are invalid or null.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>The same mashupContext object that is present as an argument to the handleMashupCompletion method</td>
+</tr>
+<tr>
+<td>reqdMashupRefId</td><td>String</td><td>The ID of the mashup for which the output data should be fetched</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getMashupContextForPaginatedBehaviorCall</div>
+<div style="font-size: 15px">The getMashupContextForPaginatedBehaviorCall method returns the mashupContext object that can be used to invoke mashup in case of a paginated grid. Returns null if screenInstance or gridxUId is null.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>pageSize</td><td>String</td><td>Number of records to be fetched for a page. Defaults to the current pageSize value in the grid store. If that is also not set, defaults to 5</td>
+</tr>
+<tr>
+<td>pageNo</td><td>Number</td><td>The page number to load through the API call. Defaults to the current pageNo value on the grid store. If that is also not set, defaults to 1</td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>String</td><td>Optional argument indicating the ID of the mashup for which the paginated call is to be made. Defaults to the one in the grid store. If the grid store does not have this information, null is returned</td>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>Optional argument if passed will override any pagination specific attributes. Other attributes will be retained</td>
+</tr>
+<tr>
+<td>maskUI</td><td>Boolean</td><td>Optional argument to display mask on UI during the API call. Defaults to true. NOTE: This attribute is completely ignored if mashupContext is passed</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Bean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getMashupRefObjectForPaginatedBehaviorCall</div>
+<div style="font-size: 15px">The getMashupRefObjectForPaginatedBehaviorCall method returns a mashupRefObject that can be added to the mashupRefList array to invoke mashup for a paginated grid. Returns null if the following conditions are not met: Either screenInstance or gridxUId is null OR mashupRefId or originalInput was not passed or could not be calculated.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>String</td><td>The mashup reference id of the mashup call. OPTIONAL only if data has been set on the grid at least once prior to this method call</td>
+</tr>
+<tr>
+<td>originalInput</td><td>Model</td><td>The original input data to the grid. NOTE: 1. If the data is being set on the grid for the first time or input data has not been set on the grid using other utility methods, this attribute becomes MANDATORY. 2. If data has been set on grid at least once or a utility has been called to set the input data then this attribute is OPTIONAL</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">startPaginationUsingUId</div>
+<div style="font-size: 15px">The startPaginationUsingUId method starts the pagination on a grid. Use this method when pagination should be started by a behavior call or when the Mashup call should be separate and be made by the grid itself.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>inputJson</td><td>Model</td><td>The input data to the grid to start pagination. This is the input to the pagination API</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Other options that can be used for pagination like the following attributes: mashupRefId, screen</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">loadPageFromMashupContext</div>
+<div style="font-size: 15px">The loadPageFromMashupContext method loads the required page or changes pagination size based on data in the mashupContext object. Appropriate utility methods are invoked automatically. Returns true if the page was loaded or false otherwise.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>originalInput</td><td>Model</td><td>The mashupContext object that was possibly prepared using getMashupContextForPaginatedBehaviorCall method. This object is also present as an argument in handleMashupCompletion method</td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>String</td><td>The mashup reference ID for which data needs to be loaded</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getPaginationUIActionFromMashupContext</div>
+<div style="font-size: 15px">The getPaginationUIActionFromMashupContext method returns the paginationUIAction string from the paginatedMashupRefIdArray defined in the mashupContext.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>The mashupContext object that is present as an argument to the handleMashupCompletion method</td>
+</tr>
+<tr>
+<td>reqdMashupRefId</td><td>String</td><td>The mashup reference ID for which the paginationUIAction needs to be fetched</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">loadNextPage</div>
+<div style="font-size: 15px">The loadNextPage method loads the next page data on the grid. Returns true if data is loaded successfully or false otherwise. NOTE: 1. Assumption is that UI event has already been triggered by user action. This will not invoke the beforeNextPage event. It will trigger beforeGotoPage event. 2. Method should be used when paginationActionsCustomImpl attribute is set as true in pagination binding.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>paginatedApiOutput</td><td>Model</td><td>The output of a paginated API call. mashupContext is an argument to the handleMashupCompletion method. paginatedApiOutput can be obtained from it by calling the getPaginationDataFromMashupContext utility method</td>
+</tr>
+<tr>
+<td>originalInput</td><td>Model</td><td>Optional argument that refers to the original input data to the grid. Present only for backward compatibility</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument that refers to the additional options needed for pagination. Present only for backward compatibility</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">loadPreviousPage</div>
+<div style="font-size: 15px">The loadPreviousPage method loads the previous page data on the grid. Returns true if data is loaded successfully or false otherwise. NOTE: 1. Assumption is that UI event has already been triggered by user action. This will not invoke the beforePreviousPage event. It will trigger beforeGotoPage event. 2. Method should be used when paginationActionsCustomImpl attribute is set as true in pagination binding.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>paginatedApiOutput</td><td>Model</td><td>The output of a paginated API call. mashupContext is an argument to the handleMashupCompletion method. paginatedApiOutput can be obtained from it by calling the getPaginationDataFromMashupContext utility method</td>
+</tr>
+<tr>
+<td>originalInput</td><td>Model</td><td>Optional argument that refers to the original input data to the grid. Present only for backward compatibility</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument that refers to the additional options needed for pagination. Present only for backward compatibility</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">reloadCurrentPage</div>
+<div style="font-size: 15px">The reloadCurrentPage method reloads the data of the current page. Returns true if data is loaded successfully or false otherwise. NOTE: 1. Assumption is that UI event has already been triggered by user action. This will not invoke the beforePageSizeChange event. 2. Method should be used when paginationActionsCustomImpl attribute is set as true in pagination binding.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>paginatedApiOutput</td><td>Model</td><td>The output of a paginated API call. mashupContext is an argument to the handleMashupCompletion method. paginatedApiOutput can be obtained from it by calling the getPaginationDataFromMashupContext utility method</td>
+</tr>
+<tr>
+<td>originalInput</td><td>Model</td><td>Optional argument that refers to the original input data to the grid. Present only for backward compatibility</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument that refers to the additional options needed for pagination. Present only for backward compatibility</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">changePageSize</div>
+<div style="font-size: 15px">The changePageSize method changes the pagination page size. NOTE: 1. Assumption is that UI event has already been triggered by user action. This will not invoke the beforePageSizeChange event. 2. Method should be used when paginationActionsCustomImpl attribute is set as true in pagination binding.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>paginatedApiOutput</td><td>Model</td><td>The output of a paginated api. mashupContext is an argument to the handleMashupCompletion method. paginatedApiOutput can be obtained from it by calling the getPaginationDataFromMashupContext utility method</td>
+</tr>
+<tr>
+<td>originalInput</td><td>Model</td><td>Optional argument that refers to the original input data to the grid. Present only for backward compatibility</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument that refers to the additional options needed for pagination. Present only for backward compatibility</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">startPaginationWithOutputData</div>
+<div style="font-size: 15px">The startPaginationWithOutputData method starts the grid pagination with the first page data already available to paint on UI.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>inputData</td><td>Model</td><td>The input data needed for grid pagination</td>
+</tr>
+<tr>
+<td>outputData</td><td>Model</td><td>The first page output data of the paginated grid</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>This object is mandatory and it should have mashup reference ID for the behavior call and screen in which the mashup reference is defined</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hidePaginationBar</div>
+<div style="font-size: 15px">The hidePaginationBar method hides the pagination bar on a paginated grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument if passed as true will skip resizing the owner screen</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showPaginationBar</div>
+<div style="font-size: 15px">The showPaginationBar method shows the pagination bar on a paginated grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the grid</td>
+</tr>
+<tr>
+<td>gridxUId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument if passed as true will skip resizing the owner screen</td>
+</tr>
+<tr>
+<td>classToAdd</td><td>String</td><td>Optional argument that contains the CSS class to add to the pagination bar when displayed</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

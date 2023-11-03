@@ -1,0 +1,337 @@
+<html>
+<body>
+<h2>ScreenUtils</h2>
+<h4>This utility class contains common methods for screen handling.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">scrollTop</div>
+<div style="font-size: 15px">The scrollTop method scrolls the specified widget to top and into the visible area below the fixed header.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance which has the widget to be scrolled to</td>
+</tr>
+<tr>
+<td>widgetUId</td><td>String</td><td>Widget UId</td>
+</tr>
+<tr>
+<td>offset</td><td>String</td><td>Extra offset from above fixed height</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">scrollTopWithFixedHeader</div>
+<div style="font-size: 15px">The scrollTop method scrolls the specified widget to top and into the visible area below the fixed header.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance which has the widget to be scrolled to</td>
+</tr>
+<tr>
+<td>widgetUId</td><td>String</td><td>Widget UId</td>
+</tr>
+<tr>
+<td>offset</td><td>String</td><td>Extra offset from above fixed height</td>
+</tr>
+<tr>
+<td>fixedHeight</td><td>String</td><td>Fxied height which is not scrollable.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">scrollToWidgetTop</div>
+<div style="font-size: 15px">The scrollToWidgetTop method scrolls the specified widget to top and into the visible area below the fixed header. This method should be used as event subscriber handler.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UI event object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>UId of the control widget.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Event arguments contains any extra parameters to be passed for the even handler.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">scrollToWidgetAfterPageLoad</div>
+<div style="font-size: 15px">The scrollToWidgetAfterPageLoad method scrolls the repeating screen widget to top or scrolls to the pagination bar and into the visible area below the fixed header. This method should be used as event subscriber handler.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UI event object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>UId of the control widget.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Event arguments contains any extra parameters to be passed for the even handler.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getItemImageLocation</div>
+<div style="font-size: 15px">The getItemImageLocation method returns image location for the product.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance which contains the image widget.</td>
+</tr>
+<tr>
+<td>widget</td><td>Widget</td><td>UId of the image widget.</td>
+</tr>
+<tr>
+<td>nameSpace</td><td>String</td><td>Source namespace of the widget.</td>
+</tr>
+<tr>
+<td>itemModel</td><td>Model</td><td>Model data of the source namespace.</td>
+</tr>
+<tr>
+<td>options</td><td>Model</td><td>Options passed as the model.</td>
+</tr>
+<tr>
+<td>dataValue</td><td>String</td><td>Data value associated with the binding.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getItemImageId</div>
+<div style="font-size: 15px">The getItemImageId method returns image ID for the product.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance which contains the image widget.</td>
+</tr>
+<tr>
+<td>widget</td><td>Widget</td><td>UId of the image widget.</td>
+</tr>
+<tr>
+<td>nameSpace</td><td>String</td><td>Source namespace of the widget.</td>
+</tr>
+<tr>
+<td>itemModel</td><td>Model</td><td>Model data of the source namespace.</td>
+</tr>
+<tr>
+<td>options</td><td>Model</td><td>Options passed as the model.</td>
+</tr>
+<tr>
+<td>dataValue</td><td>String</td><td>Data value associated with the binding.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">resetProductAspectRatio</div>
+<div style="font-size: 15px">The resetProductAspectRatio method resets the aspect ratio of the product image after the image loads.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UI event object associated with the event.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>UId of the control widget.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Event arguments contains any extra parameters to be passed for the even handler.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hideSystemMessage</div>
+<div style="font-size: 15px">The hideSystemMessage method hides the system message panel.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance for which System Message panel needs to be hidden.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">updateEditorTitle</div>
+<div style="font-size: 15px">The updateEditorTitle method updates the editor title.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance for which editor title needs to be updated.</td>
+</tr>
+<tr>
+<td>titleParam</td><td>String</td><td>Title parameter for the editor title.</td>
+</tr>
+<tr>
+<td>titleKey</td><td>String</td><td>Title key for the editor title.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getForwardBindingNamespaceMapBean</div>
+<div style="font-size: 15px">The getForwardBindingNamespaceMapBean method returns the constructed forward-binding namespace-map.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>parentnamespace</td><td>String</td><td>Name of the parent screen's namespace.</td>
+</tr>
+<tr>
+<td>parentpath</td><td>String</td><td>Path of the parent screen's model data to be forwarded.</td>
+</tr>
+<tr>
+<td>childnamespace</td><td>String</td><td>Name of the child screen's namespace.</td>
+</tr>
+<tr>
+<td>childpath</td><td>String</td><td>Path of the child screen's model to set model data.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Bean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getScreenProperty</div>
+<div style="font-size: 15px">The getScreenProperty method returns the value of the screen property.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance from which property value needs to be returned.</td>
+</tr>
+<tr>
+<td>propertyName</td><td>String</td><td>Name of the screen property.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setScreenProperty</div>
+<div style="font-size: 15px">The setScreenProperty method sets the value of the screen property.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance for which property value needs to be set.</td>
+</tr>
+<tr>
+<td>propertyName</td><td>String</td><td>Name of the screen property.</td>
+</tr>
+<tr>
+<td>propertyValue</td><td>String</td><td>Value that needs to be set for Screen property.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

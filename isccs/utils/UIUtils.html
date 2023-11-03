@@ -1,0 +1,166 @@
+<html>
+<body>
+<h2>UIUtils</h2>
+<h4>This utility class contains methods which are used for user interface handling of the application.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">callApi</div>
+<div style="font-size: 15px">The callApi method expedites calling an api by accepting a screen, input model and mashup reference id.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which you want to invoke a mashup</td>
+</tr>
+<tr>
+<td>modelInput</td><td>Model</td><td>The input object to the API.</td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>String</td><td>The mashup reference identifier.</td>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>This is the mashup context object. If it is not passed, ControllerUtils.getMashupContext will be used to fetch the context object</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">callApis</div>
+<div style="font-size: 15px">The callApis method expedites calling multiple apis by accepting a screen, a list of input models and a corresponding list of mashup reference ids.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which you want to invoke a mashup</td>
+</tr>
+<tr>
+<td>modelInput</td><td>List</td><td>Array of input objects to the APIs. </td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>List</td><td>The mashup reference identifiers to the APIs. </td>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>This is the mashup context object.If it is not passed, ControllerUtils.getMashupContext will be used to fetch the context object</td>
+</tr>
+<tr>
+<td>optionsBean</td><td>Bean</td><td>This is the options object in the callMashups.This object can take options like aggregate=true, If it is not passed, ControllerUtils will use the default configurations.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openSimplePopup</div>
+<div style="font-size: 15px">The openSimplePopup method opens a popup with standard parameters.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenName</td><td>String</td><td>The complete path of the screen which needs to be opened as pop-up. </td>
+</tr>
+<tr>
+<td>title</td><td>String</td><td>Title which needs to be shown for the screen.</td>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from where the pop-up needs to be opened.</td>
+</tr>
+<tr>
+<td>popupParams</td><td>Bean</td><td>Any extra information for the pop-up screen can be passed here. For eg : Create an object called as screenInput inside the popupParams to pass the input to the screen.</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Information about call back handlers needed for closing the pop-up can be passed here. Pass the call back handler in closeCallBackHandler object.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">startPagination</div>
+<div style="font-size: 15px">This method takes the grid id, input data and options and starts the pagination in a grid by calling the corresponding mashup. Once the results are retrieved, the results are populated on the grid and the pagingation bar is set appropriately.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen which contains the paginated grid.</td>
+</tr>
+<tr>
+<td>gridId</td><td>String</td><td>Unique identifier of the grid.</td>
+</tr>
+<tr>
+<td>inputData</td><td>Model</td><td>Input model to the pagination mashup call.</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>A bean object with the following properties - mashupRefId: contains the mashupRefId to make the pagination call.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">logoutUser</div>
+<div style="font-size: 15px">Logs out the user.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">compareAddressObjects</div>
+<div style="font-size: 15px">Used to compare two address objects</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>AddressObject1</td><td>Model</td><td>Model containing address object to be compared.</td>
+</tr>
+<tr>
+<td>AddressObject2</td><td>Model</td><td>Model containing address object to be compared.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

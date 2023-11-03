@@ -1,0 +1,577 @@
+<html>
+<body>
+<h2>GridxUtils</h2>
+<h4>This utility class contains methods like adding items to grid, deleting items from grid, modifying or updating the items in grid, disabling and enabling grid,adding preview panel, hidding and showing the grid column etc.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">addUnCommitedRecordToGridUsingUId</div>
+<div style="font-size: 15px">The addUnCommitedRecordToGridUsingUId method adds a record to the grid and does not update the grid store. This method returns the index of the added row.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+<tr>
+<td>newModelRecord</td><td>Model</td><td>JSON object for the record that needs to be added to the grid. Don't specify this if you want a empty row to be added</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Number</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">deleteUnCommittedRecordFromGridUsingUId</div>
+<div style="font-size: 15px">The deleteUnCommittedRecordFromGridUsingUId method deletes an item from the grid and does not update the grid store.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+<tr>
+<td>modelItem</td><td>Model</td><td>Model object of the grid row that needs to be deleted</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">updateRecordToGridUsingUId</div>
+<div style="font-size: 15px">The updateRecordToGridUsingUId method updates the old model item of a grid record with the new one passed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen instance containing the grid</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>oldModelItem</td><td>Model</td><td>Model Item that needs to be updated</td>
+</tr>
+<tr>
+<td>newModelItem</td><td>Model</td><td>New Model Json with the values that needs to be updated</td>
+</tr>
+<tr>
+<td>isPartialUpdate</td><td>Boolean</td><td>This flag indicates whether an update is a partial update (i.e. subset of the record item) or not</td>
+</tr>
+<tr>
+<td>skipRefreshGrid</td><td>Boolean</td><td>This flag should be passed as true if refresh is not required for the grid</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getItemFromRowIndexUsingUId</div>
+<div style="font-size: 15px">The getItemFromRowIndexUsingUId method returns the rowItem object for the grid's rowIndex.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+<tr>
+<td>rowIndex</td><td>Number</td><td>Row index of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getSelectedSourceRecordsUsingUId</div>
+<div style="font-size: 15px">The getSelectedSourceRecordsUsingUId method returns the selected source or original model from the grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getSelectedSourceRecordsWithRowIndex</div>
+<div style="font-size: 15px">The getSelectedSourceRecordsWithRowIndex method returns selected grid records with their row index and row data.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : List</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getSelectedTargetRecordsUsingUId</div>
+<div style="font-size: 15px">The getSelectedTargetRecordsUsingUId method returns selected target model from the grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">deselectRowUsingHiddenColumn</div>
+<div style="font-size: 15px">The deselectRowUsingHiddenColumn method deselects the unique row corresponding to value of a hidden custom column.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen in which the grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The uId attribute of the grid</td>
+</tr>
+<tr>
+<td>value</td><td>String</td><td>The value of the hidden custom column that needs to be searched</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Number</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hideTableColumn</div>
+<div style="font-size: 15px">The hideTableColumn method hides the specified column in the grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen where the grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique id attribute of the grid</td>
+</tr>
+<tr>
+<td>columnNameToHide</td><td>String</td><td>The column which needs to be hidden. Corresponds to the field attribute</td>
+</tr>
+<tr>
+<td>columnNameToAddWidth</td><td>String</td><td>Optional argument to indicate the column where the hidden column's width needs to be added.Corresponds to the field attribute</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showTableColumn</div>
+<div style="font-size: 15px">The showTableColumn method unhides and shows the specified column in the grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen where the grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique id attribute of the grid</td>
+</tr>
+<tr>
+<td>columnNameToShow</td><td>String</td><td>The column which needs to be shown. Corresponds to the field attribute.</td>
+</tr>
+<tr>
+<td>donatingclmName</td><td>String</td><td>The column from where the width needs to be borrowed. Corresponds to the field attribute</td>
+</tr>
+<tr>
+<td>width</td><td>Number</td><td>The width of the table column. Pass the %age width. % symbol should not be appended</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">refreshGridxLayout</div>
+<div style="font-size: 15px">The refreshGridxLayout method refreshes/re-calculates the horizontal and vertical layout of a gridx widget.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen where the gridx widget is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique id attribute of the gridx widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">refreshGridxHeader</div>
+<div style="font-size: 15px">The refreshGridxHeader method refreshes/re-calculates the header of a gridx widget.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen where the gridx widget is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique id attribute of the gridx widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">selectRowsUsingUId</div>
+<div style="font-size: 15px">The selectRowsUsingUId method selects the rows pertaining to the row indexes passed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID attribute of the grid</td>
+</tr>
+<tr>
+<td>selectRows</td><td>List</td><td>Array of row indexes to be selected</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">selectRowUsingUId</div>
+<div style="font-size: 15px">The selectRowUsingUId method selects the row pertaining to the row index passed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID attribute of the grid</td>
+</tr>
+<tr>
+<td>rowIndex</td><td>Number</td><td>Index of the row to be selected</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">selectUniqueRow</div>
+<div style="font-size: 15px">The selectUniqueRow method selects a row using a unique value.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID attribute of the grid</td>
+</tr>
+<tr>
+<td>value</td><td>String</td><td>Unique value of a column in the row</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">selectUniqueRowUsingHiddenColumn</div>
+<div style="font-size: 15px">The selectUniqueRowUsingHiddenColumn method selects a row using unique value of a hidden custom column.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID attribute of the grid</td>
+</tr>
+<tr>
+<td>value</td><td>String</td><td>The value of the hidden custom column that is used to select the row</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">returnUniqueRowIndexUsingHiddenColumn</div>
+<div style="font-size: 15px">The returnUniqueRowIndexUsingHiddenColumn method performs match on the basis of the value of hidden custom column passed. If a match is found then the index of the matching row is returned. If no match is found, -1 is returned.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen in which the grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The uId attribute of the grid</td>
+</tr>
+<tr>
+<td>value</td><td>String</td><td>The value of the hidden custom column that needs to be searched</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Number</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getRowJsonFromRowIndex</div>
+<div style="font-size: 15px">The getRowJsonFromRowIndex method returns the row JSON object for the grid's rowIndex passed in as input.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID attribute of the grid</td>
+</tr>
+<tr>
+<td>rowIndex</td><td>Number</td><td>Row index for which the JSON object is returned</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setGridRowDisabled</div>
+<div style="font-size: 15px">The setGridRowDisabled method sets a row of the grid as disabled.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen instance that contains the grid</td>
+</tr>
+<tr>
+<td>rowIndex</td><td>Number</td><td>Index of the grid row that needs to be disabled. Index will start from 0</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>refreshGridUI</td><td>Boolean</td><td>Flag to refresh the grid UI i.e. all rows. If set to false, refresh does not happen</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">enableDisabledRowInGrid</div>
+<div style="font-size: 15px">The enableDisabledRowInGrid method enables a grid row that is currently disabled. If the row was already enabled, no change will be observed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen instance that contains the grid</td>
+</tr>
+<tr>
+<td>rowIndex</td><td>Number</td><td>Index of the grid row that needs to be enabled. Index will start from 0</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>refreshGridUI</td><td>Boolean</td><td>Flag to refresh the grid UI i.e. all rows. If set to false, refresh does not happen</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setGridDisabled</div>
+<div style="font-size: 15px">The setGridDisabled method enables or disables the grid.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance where the grid is present</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the grid</td>
+</tr>
+<tr>
+<td>isDisabled</td><td>Boolean</td><td>If set to true, disables the grid. False enables the grid</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isGridDirty</div>
+<div style="font-size: 15px">The isGridDirty method returns the grid's dirty state i.e. if it has any unsaved/uncommitted changes or not.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen that contains the grid</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The unique identifier of the grid</td>
+</tr>
+<tr>
+<td>forceCompute</td><td>Boolean</td><td>Optional argument to force the grid to re-compute its dirty state by querying the store's dirty state</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

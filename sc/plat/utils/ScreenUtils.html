@@ -1,0 +1,630 @@
+<html>
+<body>
+<h2>ScreenUtils</h2>
+<h4>This utility class contains methods related to the current screen.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setModel</div>
+<div style="font-size: 15px">The setModel method sets the passed model data on the screen for a given namespace.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>A namespace of the above screen instance</td>
+</tr>
+<tr>
+<td>modelData</td><td>Model</td><td>JSON object to populate data on the screen instance</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument passed as an object with the following property:                             clearOldVals : Passed as true to remove existing values from widgets which are not populated using modelData above (Defaults to false)</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getModel</div>
+<div style="font-size: 15px">The getModel method returns the model for a given namespace which was set using setModel method.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>A namespace of the above screen instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getTargetModel</div>
+<div style="font-size: 15px">The getTargetModel method returns the model object from the screen for a given namespace.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>A namespace of the above screen instance</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument to specify the following option as an object.                          For grid you can pass modified|deleted|added flag in options object if either one of them is true (or all are true). getTargetModel method returns only those records which have been modified|deleted|added.                          By default these flags are false. Also allowEmpty flag can be passed to return attributes with no data (Defaults to false)</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">ignoreStaticBindings</div>
+<div style="font-size: 15px">The ignoreStaticBindings method adds the list of static bindings to the existing list of ignored static bindings on the screen (The ignored static bindings are not used when taget model is returned).</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>staticBindings</td><td>List</td><td>List of static binding objects containing source and target bindings</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getString</div>
+<div style="font-size: 15px">The getString method returns a string from the localized bundles.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>key</td><td>String</td><td>The bundle key to search for in the localized bundles</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getFormattedString</div>
+<div style="font-size: 15px">The getFormattedString method returns a formatted string from the localized bundles.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>key</td><td>String</td><td>The bundle key to search for in the localized bundles</td>
+</tr>
+<tr>
+<td>args</td><td>ALL</td><td>The object or array of strings that should be substituted in context sensitive value. The args will take a Bean, Model or List</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getLabelString</div>
+<div style="font-size: 15px">The getLabelString method returns a label string with a colon added to it.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>key</td><td>String</td><td>The bundle key for which label value is to be obtained</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showErrorMessageBox</div>
+<div style="font-size: 15px">The showErrorMessageBox method opens an error message box on the screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>message</td><td>String</td><td>The message to show in error message box</td>
+</tr>
+<tr>
+<td>screenMethodName</td><td>String</td><td>The callBackHandler method to invoke once the user clicks on any button in the message box</td>
+</tr>
+<tr>
+<td>textObj</td><td>Bean</td><td>The string to show on OK button</td>
+</tr>
+<tr>
+<td>args</td><td>Model</td><td>Optional arguments to invoke the callBackHandler method with</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showWarningMessageBox</div>
+<div style="font-size: 15px">The showWarningMessageBox method opens a warning message box on the screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>message</td><td>String</td><td>The message to show in the warning message box</td>
+</tr>
+<tr>
+<td>screenMethodName</td><td>String</td><td>The callBackHandler method to invoke once the user clicks on any button in the message box</td>
+</tr>
+<tr>
+<td>args</td><td>Model</td><td>Optional arguments to invoke the callBackHandler method with</td>
+</tr>
+<tr>
+<td>textObj</td><td>Bean</td><td>The string to show on OK button</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">validate</div>
+<div style="font-size: 15px">The validate method validates if every widget on the screen has a valid value or is in error.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isValid</div>
+<div style="font-size: 15px">The isValid method validates if any of the screen widgets that are associated with the namespace passed contain any errors. If namespace is not passed, then all namespaces will be considered.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>Optional</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isDirty</div>
+<div style="font-size: 15px">The isDirty method tests if the passed namespace is dirty(changed from previous saved state) or not and returns a boolean accordingly. If namespace is not passed the check is done for all the screen namespaces.To do a dirty check for multiple namespaces, this method has to be called once for each namespace.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>Optional</td>
+</tr>
+<tr>
+<td>forceCheck</td><td>Boolean</td><td>Optional argument passed as true to force the dirty state check again for all the widgets(Defaults to false)</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">focusFirstEditableWidget</div>
+<div style="font-size: 15px">The focusFirstEditableWidget method sets the focus on the first editable control on the screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">clearScreen</div>
+<div style="font-size: 15px">The clearScreen method resets all the dirty states of the screen to clean.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>Optional argument with the namespace value, to clear the dirty state of all the widgets associated with that namespace. If namespace is not passed, then all the widgets associated with all the namespaces will be marked clean</td>
+</tr>
+<tr>
+<td>skipParentDirtyRecalculation</td><td>Boolean</td><td>Optional argument with value as true to revert to old behavior for repeating screens when a single screen becoming clean would mark parent clean without checking the current state of other repeating screens</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getInitialInputData</div>
+<div style="font-size: 15px">The getInitialInputData method returns the initial input data passed to screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">createScreenWithinScreen</div>
+<div style="font-size: 15px">The createScreenWithinScreen method creates a screen dynamically inside the current screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>screenId</td><td>String</td><td>Unique ID of the child screen</td>
+</tr>
+<tr>
+<td>constructorArgs</td><td>Bean</td><td>Optional construction arguments for the child screen instance</td>
+</tr>
+<tr>
+<td>callbackhandler</td><td>String</td><td>Optional argument with the method name to be called on screen after the child screen is created</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Optional argument with options for the child screen</td>
+</tr>
+<tr>
+<td>screenInput</td><td>Model</td><td>Optional argument with initial input for the child screen</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">scrollToTop</div>
+<div style="font-size: 15px">The scrollToTop methods helps to scroll to the top of the window.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">disableFieldsInChildScreen</div>
+<div style="font-size: 15px">The disableFieldsInChildScreen method enables or disables all the controls in a child screen based on the uId of the child screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The parent screen object that contains the screen that needs to be enabled or disabled</td>
+</tr>
+<tr>
+<td>childId</td><td>String</td><td>The uId for the screen object that needs to be enabled or disabled</td>
+</tr>
+<tr>
+<td>params</td><td>Bean</td><td>params.disable can be set to true/false to disable/enable the child screen instance respectively</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showChildScreen</div>
+<div style="font-size: 15px">The showChildScreen method shows the child screen at a later stage for a dynamic screen reference. If the child screen is already rendered, the show method is called for the same. If not, based upon the options provided, the init API is called/not called for the child screen during the rendering process.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance of the parent in which the new screen has to be opened</td>
+</tr>
+<tr>
+<td>screenRefUId</td><td>String</td><td>Screen ID of the child screen</td>
+</tr>
+<tr>
+<td>constructorArgs</td><td>Bean</td><td>Constructor args for the the child screen</td>
+</tr>
+<tr>
+<td>callbackhandler</td><td>String</td><td>Function on the parent screen which will be invoked once this method finishes execution</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Options related to the new screen. shouldCallInitApi (Boolean, if true will cause init API call to be called. Otherwise init API will be skipped)</td>
+</tr>
+<tr>
+<td>screenInput</td><td>Model</td><td>Screen input model</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getChildScreen</div>
+<div style="font-size: 15px">The getChildScreen method returns the childScreen of a parent screen instance.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>parentScreen</td><td>Screen</td><td>Screen for which childScreen needs to be returned</td>
+</tr>
+<tr>
+<td>childscreenUId</td><td>String</td><td>uId attribute of the child screen to be returned</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Screen</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">disableScreen</div>
+<div style="font-size: 15px">The disableScreen method disables the non-form fields and makes form fields as read only.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen for which the method is called</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">enableScreen</div>
+<div style="font-size: 15px">The enableScreen method enables the non-form fields and makes the form fields editable.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">destroyDynamicScreen</div>
+<div style="font-size: 15px">The destroyDynamicScreen method destroys a dynamic screen reference created earlier.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>parentScreen</td><td>Screen</td><td>Screen instance of the parent in which the dynamic screen reference is present</td>
+</tr>
+<tr>
+<td>dynamicScreenUId</td><td>String</td><td>Screen ID of the dynamic screen reference to be destroyed</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getIdentifierId</div>
+<div style="font-size: 15px">This method returns the identifierId attribute of the identifier screen. It is used to find out the identifier html that has been loaded.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getOriginalIdentifierId</div>
+<div style="font-size: 15px">This method returns the originalIdentifierId attribute of the identifier screen. It is used to find out the original identifier html that was requested. It may differ from the identifierId attribute.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isAValidIdentifier</div>
+<div style="font-size: 15px">The isAValidIdentifier method returns true if any of the method getIdentifierId or getOriginalIdentifierId is equal to the passed identifierId.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>identifierId</td><td>String</td><td>identifierId for which the check needs to be done</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

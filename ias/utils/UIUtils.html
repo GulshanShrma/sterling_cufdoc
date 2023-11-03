@@ -1,0 +1,146 @@
+<html>
+<body>
+<h2>UIUtils</h2>
+<h4>This utility class contains common methods for UI rendering.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">callApi</div>
+<div style="font-size: 15px">The callApi method calls an API.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance that needs to invoke a mashup.</td>
+</tr>
+<tr>
+<td>modelInput</td><td>Model</td><td>Input model object to the API.</td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>String</td><td>Mashup reference identifier.</td>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>Mashup context object. If it is not passed, ControllerUtils.getMashupContext will be used to fetch the context object.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">callApis</div>
+<div style="font-size: 15px">The callApis method calls multiple APIs.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance that needs to invoke a mashups.</td>
+</tr>
+<tr>
+<td>modelInput</td><td>List</td><td>Array of input model objects to the APIs. </td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>List</td><td>Array of mashup reference identifier. </td>
+</tr>
+<tr>
+<td>mashupContext</td><td>Bean</td><td>Mashup context object. If it is not passed, ControllerUtils.getMashupContext will be used to fetch the context object.</td>
+</tr>
+<tr>
+<td>optionsBean</td><td>Bean</td><td>Options object in the callMashups. This object can take options like aggregate=true, ff it is not passed, ControllerUtils will use the default configurations.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openSimplePopup</div>
+<div style="font-size: 15px">The openSimplePopup method opens a screen as a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenName</td><td>String</td><td>Complete path of the screen which needs to be opened as pop-up. </td>
+</tr>
+<tr>
+<td>title</td><td>String</td><td>Title which needs to be shown for the screen.</td>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from where the pop-up needs to be opened.</td>
+</tr>
+<tr>
+<td>popupParams</td><td>Bean</td><td>Any extra information for the pop-up screen can be passed here. For eg : Create an object called as screenInput inside the popupParams to pass the input to the screen.</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Information about call back handlers needed for closing the pop-up can be passed here. Pass the call back handler in closeCallBackHandler object.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openWizardInEditor</div>
+<div style="font-size: 15px">The openWizardInEditor method opens the wizard in a new editor. This method reads the EditorConfig.json file and determines the editor to be used in mobile environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardId</td><td>String</td><td>Wizard Id of the wizard to open.</td>
+</tr>
+<tr>
+<td>modelData</td><td>Model</td><td>Input model to the wizard.</td>
+</tr>
+<tr>
+<td>editorID</td><td>String</td><td>Editor Id of the editor in which to open the wizard.</td>
+</tr>
+<tr>
+<td>oldScreen</td><td>Screen</td><td>Old screen instance.</td>
+</tr>
+<tr>
+<td>customEditorConfig</td><td>Bean</td><td>Editor config parameters.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">logoutUser</div>
+<div style="font-size: 15px">The logoutUser method logs out the user.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

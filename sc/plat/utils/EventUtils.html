@@ -1,0 +1,83 @@
+<html>
+<body>
+<h2>EventUtils</h2>
+<h4>This utility class contains methods related to Event Management</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">fireEventToChild</div>
+<div style="font-size: 15px">The fireEventToChild method publishes an event to the child screen from the parent screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen instance to fire the event</td>
+</tr>
+<tr>
+<td>childScreenUId</td><td>String</td><td>Unique id of child screen inside the parent screen</td>
+</tr>
+<tr>
+<td>eventName</td><td>String</td><td>Name of the event</td>
+</tr>
+<tr>
+<td>eventDefinition</td><td>Bean</td><td>Object passed to the subscribers through the event</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Bean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">fireEventToParent</div>
+<div style="font-size: 15px">The fireEventToParent method publishes an event to the parent screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>screen instance to fire the event</td>
+</tr>
+<tr>
+<td>eventName</td><td>String</td><td>name of event</td>
+</tr>
+<tr>
+<td>eventDefinition</td><td>Bean</td><td>object passed to subscribers from event</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Bean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">stopEvent</div>
+<div style="font-size: 15px">The stopEvent method stops an event. Any subsequent subscriber of the event will not get executed and if any subscriber is blocked, it'll be ignored. </div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Event object pertaining to the event to be stopped</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

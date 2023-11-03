@@ -1,0 +1,106 @@
+<html>
+<body>
+<h2>OrderUtils</h2>
+<h4>This utility class contains methods which are used in the context of an order.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openOrderSummary</div>
+<div style="font-size: 15px">The openOrderSummary method opens the order summary page for the provided order.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>event</td><td>UIEvent</td><td>UI event object associated with the event to which the method should be subscribed.</td>
+</tr>
+<tr>
+<td>bEvent</td><td>BusinessEvent</td><td>Business event object associated with the event.</td>
+</tr>
+<tr>
+<td>ctrl</td><td>String</td><td>The uId of the field from where the screen needs to be opened.</td>
+</tr>
+<tr>
+<td>args</td><td>Bean</td><td>Args contains any extra parameters which needs to be passed to the order summary page.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">validateSearchInput</div>
+<div style="font-size: 15px">Validates if the search input has any invalid criteria</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Current screen instance.</td>
+</tr>
+<tr>
+<td>targetNamespace</td><td>String</td><td>The target namespace used for retrieving the data to be validated.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">validatePriceMatchSearchInput</div>
+<div style="font-size: 15px">Validates if the search input has any invalid criteria</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Current screen instance.</td>
+</tr>
+<tr>
+<td>targetNamespace</td><td>String</td><td>The target namespace used for retrieving the data to be validated.</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getProductBrowsingInitData</div>
+<div style="font-size: 15px"></div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Current screen instance.</td>
+</tr>
+<tr>
+<td>initialInputData</td><td>Model</td><td></td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

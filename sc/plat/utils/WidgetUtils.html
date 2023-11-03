@@ -1,0 +1,344 @@
+<html>
+<body>
+<h2>WidgetUtils</h2>
+<h4>This utility class contains methods like hiding/showing the Widget, disabling/enabling the Widget, adding/removing/toggling the css classes, marking/clearing error widget etc.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hideWidget</div>
+<div style="font-size: 15px">The hideWidget method hides the widget associated with uId passed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the widget to be hidden</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument with value as true to avoid screen resize(Defaults to false)</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showWidget</div>
+<div style="font-size: 15px">The showWidget method shows the widget associated with uId passed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the widget to be shown</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument with value as true to avoid screen resize (Defaults to false)</td>
+</tr>
+<tr>
+<td>classToAdd</td><td>String</td><td>Optional argument with the CSS class to be added to the widget when it is shown</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">closePopup</div>
+<div style="font-size: 15px">The closePopup method closes a pop-up.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance inside the pop-up/dialog</td>
+</tr>
+<tr>
+<td>actionPerformed</td><td>String</td><td>Optional</td>
+</tr>
+<tr>
+<td>preserveDialog</td><td>Boolean</td><td>Optional argument with value as true to hide and false to destroy the pop-up (Defaults to false)</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">markFieldinError</div>
+<div style="font-size: 15px">The markFieldinError method marks the widget as an error field.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the widget</td>
+</tr>
+<tr>
+<td>errorMessage</td><td>String</td><td>Error message which needs to be displayed. If this is not passed, default error message associated with the widget will be used</td>
+</tr>
+<tr>
+<td>skipFocus</td><td>Boolean</td><td>If this flag is true, focus is not set on the widget.Otherwise, it is set</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">clearFieldinError</div>
+<div style="font-size: 15px">The clearFieldinError method clears the error condition of a given widget.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">destroyWidget</div>
+<div style="font-size: 15px">The destroyWidget method destroys the widget identified by the uId passed to this method.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setLinkImageSrc</div>
+<div style="font-size: 15px">The setLinkImageSrc method changes the image inside a link dynamically.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen instance that contains the Link</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The uId of the Link to be modified</td>
+</tr>
+<tr>
+<td>imageSrc</td><td>String</td><td>The path of the new image to be rendered. It may or may not be relative to the context root and depends on the appendToContextRoot attribute on the link</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">createIframeWidget</div>
+<div style="font-size: 15px">The createIframeWidget method creates an Iframe widgets dynamically in the screen and returns the UId of the dynamically created widget.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen instance in which the widget is to be created</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>The uId of the new widget to be created. If passed as null, auto generated uId is returned</td>
+</tr>
+<tr>
+<td>configObj</td><td>Bean</td><td>The JSON object that contains all the attributes such as frameId, frameSrc, applyCSRF, and others required to create an IFrame</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">placeAt</div>
+<div style="font-size: 15px">The placeAt method places a dynamically created widget with respect to another existing widget on the screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>The screen instance in which the new widget is to be placed</td>
+</tr>
+<tr>
+<td>refUId</td><td>String</td><td>The uId of the widget with respect to which the new widget needs to be placed. This is the reference widget</td>
+</tr>
+<tr>
+<td>createdUId</td><td>String</td><td>The uId of the dynamically created widget that needs to be placed on the screen</td>
+</tr>
+<tr>
+<td>position</td><td>String</td><td>Specifies where to place the new widget with respect to the reference widget. Supported values: first, last, before or after. NOTE: first and last should only be used when reference widget is a container</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setIFrameSrc</div>
+<div style="font-size: 15px">The setIFrameSrc method updates the frameSrc attribute for an IFrame widget with a given uId. IFrame widget will automatically re-load to reflect the updated frameSrc.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the IFrame widget</td>
+</tr>
+<tr>
+<td>iframeUId</td><td>String</td><td>The uId of the IFrame widget to update</td>
+</tr>
+<tr>
+<td>src</td><td>String</td><td>Mandatory. The new value of the frameSrc attribute of for the widget. The IFrame widget will automatically re-load to point to the new src</td>
+</tr>
+<tr>
+<td>qryParamsList</td><td>List</td><td>Optional argument with the qryParamsList attribute for the IFrame widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">changeImageSrc</div>
+<div style="font-size: 15px">The changeImageSrc method changes the src attribute of an image.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the image widget</td>
+</tr>
+<tr>
+<td>imageSrcValue</td><td>String</td><td>New value of the image src attribute</td>
+</tr>
+<tr>
+<td>appendToContextRoot</td><td>Boolean</td><td>If the value is true, the imageSrcValue will be appended to the current application context root</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">changeImageAlt</div>
+<div style="font-size: 15px">The changeImageAlt method changes the alt attribute of an image.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the image widget</td>
+</tr>
+<tr>
+<td>imageAltValue</td><td>String</td><td>New value of the image alt attribute</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">changeImageTitle</div>
+<div style="font-size: 15px">The changeImageTitle method changes the title attribute of an image.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>A screen instance</td>
+</tr>
+<tr>
+<td>uId</td><td>String</td><td>Unique ID of the image widget</td>
+</tr>
+<tr>
+<td>imageTitleValue</td><td>String</td><td>New value of the image title attribute</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

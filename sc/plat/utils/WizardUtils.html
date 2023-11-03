@@ -1,0 +1,263 @@
+<html>
+<body>
+<h2>WizardUtils</h2>
+<h4>This utility class contains methods related to Wizards.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">nextScreen</div>
+<div style="font-size: 15px">The nextScreen method returns the next screen instance of the wizard instance.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Screen</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showNextScreenWithUpdate</div>
+<div style="font-size: 15px">The showNextScreenWithUpdate method invokes behavior mashup references along with next page in a single server request. The behavior mashup references are invoked first and then the init controller of the next page is invoked. This method offers better performance when save and next functionality is required for navigation between wizard pages.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+<tr>
+<td>mashupsData</td><td>Model</td><td>The data that needs to be passed to the mashup</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Screen</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">previousScreen</div>
+<div style="font-size: 15px">The previousScreen method returns the previous screen instance of the wizard instance.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Screen</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openWizardInEditor</div>
+<div style="font-size: 15px">The openWizardInEditor method opens the wizard given by wizardId in an Editor.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardId</td><td>String</td><td>Unique ID of the wizard</td>
+</tr>
+<tr>
+<td>wizardInput</td><td>Model</td><td>Initial input object to wizard</td>
+</tr>
+<tr>
+<td>editorId</td><td>String</td><td>ID of the editor to place the wizard in </td>
+</tr>
+<tr>
+<td>editorConfig</td><td>Model</td><td>Optional argument with the configutration parameters associated with the editor in which screen or wizard will be opened </td>
+</tr>
+<tr>
+<td>oldScreen</td><td>Screen</td><td>Optional argument with the old screen instance</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getCurrentPage</div>
+<div style="font-size: 15px">The getCurrentPage method returns the current screen instance of a wizard.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Screen</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getCurrentPageByUId</div>
+<div style="font-size: 15px">The getCurrentPageByUId method returns the uId attribute of the wizard's current screen instance.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isCurrentPageFirstEntity</div>
+<div style="font-size: 15px">The isCurrentPageFirstEntity method queries if the page displayed in the wizard stack container is the first entity of the wizard. Returns true if it is the first entity, false otherwise.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isCurrentPageLastEntity</div>
+<div style="font-size: 15px">The isCurrentPageLastEntity method queries if the page displayed in the wizard stack container is the last entity of the wizard. Returns true if it is the last entity, false otherwise.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">confirmWizard</div>
+<div style="font-size: 15px">The confirmWizard method invokes confirm on a wizard instance. As part of the method invocation, beforeConfrm and afterConfirm events are raised.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">closeWizard</div>
+<div style="font-size: 15px"> The closeWizard method fires beforeClose event and then closes the wizard.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showPreviousPage</div>
+<div style="font-size: 15px">The showPreviousPage method takes the user to previous page with provided screen type.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+<tr>
+<td>screenType</td><td>String</td><td>Optional argument which shows previous screen with matching screen type. Previous screen is shown if this value is not passed</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">isCurrentPageLeaf</div>
+<div style="font-size: 15px">The isCurrentPageLeaf method returns true if the currently opened page in wizard is a leaf. </div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>wizardInstance</td><td>Wizard</td><td>A wizard instance</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Boolean</div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

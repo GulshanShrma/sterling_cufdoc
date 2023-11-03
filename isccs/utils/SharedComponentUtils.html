@@ -1,0 +1,326 @@
+<html>
+<body>
+<h2>SharedComponentUtils</h2>
+<h4>This utility class contains methods that are commonly used across the application. These methods can also be used while extending the application.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openAddressCapture</div>
+<div style="font-size: 15px">The openAddressCapture method opens the address capture screen in a popup window.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>screenInput</td><td>Model</td><td>Initial input to the screen.</td>
+</tr>
+<tr>
+<td>personInfo</td><td>Model</td><td>PersonInfo object needed to load the screen. Pass empty model if it is a new address. If the values are driven from common codes, please pass the CodeValue instead of passing the CodeShortDescription.</td>
+</tr>
+<tr>
+<td>enterpriseCode</td><td>String</td><td>Enterprise code of the current or selected enterprise.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+<tr>
+<td>callBackHandler</td><td>String</td><td>Function or method name in the base screen where processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the address capture pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openStoreSelectionForMultipleLines</div>
+<div style="font-size: 15px">The openStoreSelectionForMultipleLines method opens the store selection pop-up window for given order lines. Product availability and other related products are shown in this screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>OrderLines</td><td>List</td><td>Model containing list of order lines associated with the order.</td>
+</tr>
+<tr>
+<td>Order</td><td>Model</td><td>Model containing the details of the current order.</td>
+</tr>
+<tr>
+<td>PersonInfo</td><td>Model</td><td>PersonInfo object associated with the PersonInfoShipTo object of an orderline.</td>
+</tr>
+<tr>
+<td>EnterpriseCode</td><td>String</td><td>Enterprise code of the current or selected enterprise.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+<tr>
+<td>callBackHandler</td><td>String</td><td>Function or method name in the base screen in which processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the store selection pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openStoreSelectionForOrderLine</div>
+<div style="font-size: 15px">The openStoreSelectionForOrderLine method opens the store selection screen as a pop-up window for the given order line. Product availability and other related items are shown in this screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>OrderLine</td><td>Model</td><td>Model that contains the details of the current order line.</td>
+</tr>
+<tr>
+<td>PersonInfo</td><td>Model</td><td>PersonInfo object associated with the PersonInfoShipTo object of an order line.</td>
+</tr>
+<tr>
+<td>EnterpriseCode</td><td>String</td><td>Enterprise code of the current or selected enterprise.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+<tr>
+<td>callBackHandler</td><td>String</td><td>Function or method name in the base screen in which processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the store selection pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openStoreSelectionForItem</div>
+<div style="font-size: 15px">The openStoreSelectionForItem method opens the store selection screen as a pop-up window for the given product. Product availability and other related products are shown in this screen.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>Item</td><td>Model</td><td>Model that contains product information like ItemId, ProductClass, and so on.</td>
+</tr>
+<tr>
+<td>PersonInfo</td><td>Model</td><td>PersonInfo object that contains the details of city, state, and zip code that are required to fetch the store locations.This model is optional.</td>
+</tr>
+<tr>
+<td>EnterpriseCode</td><td>String</td><td>Enterprise code of the current or selected enterprise.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+<tr>
+<td>callBackHandler</td><td>String</td><td>Function or method name in the base screen in which processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the store selection pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openNotesForOrderObject</div>
+<div style="font-size: 15px">The openNotesForOrderObject method opens the note display and capture screen as a pop-up window for a given order.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>order</td><td>Model</td><td>Model that contains the details of the current order.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openNotesForCustomerObject</div>
+<div style="font-size: 15px">The openNotesForCustomerObject method opens the note display and capture screen as a popup for a given customer.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>customer</td><td>Model</td><td>Model that contains the details of the current customer.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openMandatoryNoteForOrderLine</div>
+<div style="font-size: 15px">The openMandatoryNoteForOrderLine method opens a pop-up window to capture a note for a given order line.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>orderLine</td><td>Model</td><td>Model that contains the details of the current order line.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+<tr>
+<td>sCallBackHandler</td><td>String</td><td>Function or method name in the base screen in which processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the orderline note pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openEditNoteForCustomer</div>
+<div style="font-size: 15px">The openEditNoteForCustomer method opens a pop-up window to capture a note for a given customer.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>eNote</td><td>Model</td><td>Model that contains the details of the current notes object.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+<tr>
+<td>sCallBackHandler</td><td>String</td><td>Function or method name in the base screen in which processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the customer note pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openNotesForAlertObject</div>
+<div style="font-size: 15px">The openNotesForAlertObject method opens the note display and capture screen as a pop-up window for a given alert.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>eInbox</td><td>Model</td><td>Model that contains the details of the current alert.</td>
+</tr>
+<tr>
+<td>popupTitle</td><td>String</td><td>Title which must be shown in the pop-up window.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openPriceSummary</div>
+<div style="font-size: 15px">The openPriceSummary method opens the Order Pricing Summary screen which contains a break-up of all the charges and taxes that are associated with the order.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>orderModel</td><td>Model</td><td>Model that contains the details of the current order.</td>
+</tr>
+<tr>
+<td>Screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">openEnterpriseSelectionPopup</div>
+<div style="font-size: 15px">The openEnterpriseSelectionPopup method opens the enterprise selection pop-up window.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>orgModel</td><td>Model</td><td>Model that contains the details of all the enterprises or organizations that are valid for the current user.</td>
+</tr>
+<tr>
+<td>Screen</td><td>Screen</td><td>Screen from which the pop-up window is opened.</td>
+</tr>
+<tr>
+<td>callBackHandler</td><td>String</td><td>Function or method name in the base screen in which processing must be done after the data is saved. This call back function gets the following attribute - 1. actionPerformed: This is a string attribute which informs what was the action performed on the enterprise selection pop-up. The values can be APPLY or CLOSE. 2. model - This is the model object which is returned by the pop-up window. 3. popupParams - This is a bean object which contains the parameters which were passed on the pop-up such as binding object, isModal, screenId, screen Input, title.</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<html>
+<body>
+<h2>RepeatingPanelUtils</h2>
+<h4>This utility class contains methods related to pagination for repeating panels.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">startPaginationUsingUId</div>
+<div style="font-size: 15px">The startPaginationUsingUId method calls the paginated behavior mashup API and paints the paginated repeating panels.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>The source namespace for which the data will be set for the repeating panels</td>
+</tr>
+<tr>
+<td>inputData</td><td>Model</td><td>The input data to be sent to the pagination API</td>
+</tr>
+<tr>
+<td>mashupRefId</td><td>String</td><td>The unique Id of the paginated behavior mashup API (defaults to the value from binding data)</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setModelForIndividualRepeatingPanel</div>
+<div style="font-size: 15px">The setModelForIndividualRepeatingPanel method sets the model data for a particular repeating panel.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>uniquePanelUId</td><td>String</td><td>The unique identifier (used by the application) of the repeating panel for which data needs to be set</td>
+</tr>
+<tr>
+<td>namespace</td><td>String</td><td>The source namespace for which the data needs to be set for the repeating panel</td>
+</tr>
+<tr>
+<td>modelObj</td><td>Model</td><td>The model object that is used to set data for the repeating panel</td>
+</tr>
+<tr>
+<td>options</td><td>Bean</td><td>Any extra options needed to set data for the repeating panel</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">returnUIdOfIndividualRepeatingPanel</div>
+<div style="font-size: 15px">The returnUIdOfIndividualRepeatingPanel method returns the unique identifier of a particular repeating panel.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>uniquePanelUId</td><td>String</td><td>The unique identifier (used by the application) of the repeating panel whose uId attribute needs to be returned</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hideDesktopPaginationBar</div>
+<div style="font-size: 15px">The hideDesktopPaginationBar method hides the pagination bar of a repeating panel screen in a desktop environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument that should be passed as true to avoid screen resize</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showDesktopPaginationBar</div>
+<div style="font-size: 15px">The showDesktopPaginationBar method shows the pagination bar of a repeating panel screen (if it is hidden already) in a desktop environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument that should be passed as true to avoid screen resize</td>
+</tr>
+<tr>
+<td>classToAdd</td><td>String</td><td>Optional argument that contains the CSS class to be added to the pagination bar widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hideMobilePaginationPreviousButton</div>
+<div style="font-size: 15px">The hideMobilePaginationPreviousButton method hides the Previous button present inside the pagination bar of a repeating panel screen in a mobile environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument that should be passed as true to avoid screen resize</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showMobilePaginationPreviousButton</div>
+<div style="font-size: 15px">The showMobilePaginationPreviousButton method shows the Previous button present inside the pagination bar of a repeating panel screen (if it is hidden already) in a mobile environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels.</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument that should be passed as true to avoid screen resize</td>
+</tr>
+<tr>
+<td>classToAdd</td><td>String</td><td>Optional argument that contains the CSS class to be added to the previous button of the pagination bar widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">hideMobilePaginationNextButton</div>
+<div style="font-size: 15px">The hideMobilePaginationNextButton method hides the Next button present inside the pagination bar of a repeating panel screen in a mobile environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panel.</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument that should be passed as true to avoid screen resize</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">showMobilePaginationNextButton</div>
+<div style="font-size: 15px">The showMobilePaginationNextButton method shows the Next button present inside the pagination bar of a repeating panel screen (if it is hidden already) in a mobile environment.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>skipOwnerScreenResize</td><td>Boolean</td><td>Optional argument that should be passed as true to avoid screen resize</td>
+</tr>
+<tr>
+<td>classToAdd</td><td>String</td><td>Optional argument that contains the CSS class to be added to the next button of the pagination bar widget</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getLastPageAction</div>
+<div style="font-size: 15px">The getLastPageAction method returns the last page action done by the user for the paginated repeating panels. Default value returned is start. Other possible return values are next, previous and pageSizeChange.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getLastPageActionWidget</div>
+<div style="font-size: 15px">The getLastPageActionWidget method returns the last page action widget. If the mobile app is used, either the previous or the next button widget is returned. In case of desktop, the pagination bar widget that contains the previous, next and the combo box is returned.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Widget</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">scrollToRepeatingRecordNumber</div>
+<div style="font-size: 15px">Method to scroll to the required record index among the list of repeating records. Counting starts with a non-zero index.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>recordNumber</td><td>Number</td><td>The repeating panel to scroll to. The index begins with a non-zero number</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">setIgnoreScrollToNextPage</div>
+<div style="font-size: 15px">Setter method that enables users to ignore scroll or swipe actions to load next page. Passing ignoreScroll as true enables this behavior. To allow scroll or swipe actions to load next page, pass the parameter as false.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>screenInstance</td><td>Screen</td><td>The instance of the screen that contains the repeating panels</td>
+</tr>
+<tr>
+<td>repeatingPanelUId</td><td>String</td><td>The unique identifier of the content pane that contains the repeating panels</td>
+</tr>
+<tr>
+<td>ignoreScroll</td><td>Boolean</td><td>Pass true to ignore scroll or swipe action to load next page. Pass false to retain the default behavior of loading next page on scroll or swipe</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>

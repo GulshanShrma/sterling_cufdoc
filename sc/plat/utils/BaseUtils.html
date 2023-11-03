@@ -1,0 +1,163 @@
+<html>
+<body>
+<h2>BaseUtils</h2>
+<h4>This utility class contains methods like creating new instance of Array or Model , numeric operations like greater or less than or number in range, Date Operations, String operations, Array operations, empty check etc.</h4>
+<h3>Methods</h3>
+<table summary="" cellspacing="" cellpadding="3" width="100%" border="1">
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">getScreenFromEventArguments</div>
+<div style="font-size: 15px">The getScreenFromEventArguments method returns the screen object from the event argument object passed.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>eventArgumentObj</td><td>Model</td><td>A business object from any local event subscriber</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Screen</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">convertToServerFormat</div>
+<div style="font-size: 15px">The convertToServerFormat method formats a Date object as a string according to a subset of the ISO-8601 standard.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>date</td><td>Date</td><td>A Date object</td>
+</tr>
+<tr>
+<td>type</td><td>String</td><td>Input type. Valid values are 'DATE', 'TIME', 'DATETIME'</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">mergeModel</div>
+<div style="font-size: 15px">The mergeModel method merges the source model into the destination model and returns the destination model. When both models have the same data value, the source model's value is used.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>destinationObject</td><td>Model</td><td>The destination model</td>
+</tr>
+<tr>
+<td>sourceObject</td><td>Model</td><td>The source model</td>
+</tr>
+<tr>
+<td>ignoreEmpty</td><td>Boolean</td><td>Boolean to indicate if the empty attributes inside the model object need to be ignored while copying</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">removeBlankAttributes</div>
+<div style="font-size: 15px">The removeBlankAttributes method checks and deletes the blank attributes from the JSON Object passed as input.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>jsonObject</td><td>Model</td><td>The JSON object from which blank attributes need to be removed</td>
+</tr>
+</table>
+<div></div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">formatDateToUserFormat</div>
+<div style="font-size: 15px">The formatDateToUserFormat method formats the date to user locale format.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>date</td><td>String</td><td>Date in YYYY-MM-DD format. Example:2012-02-01</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">cloneModel</div>
+<div style="font-size: 15px">The cloneModel method returns the clone object of the passed JSON object.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>obj</td><td>Model</td><td>The object to be cloned</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : Model</div>
+</tr>
+<br>
+</table>
+</tr>
+<tr>
+<table cellpadding="3" cellspacing="3">
+<tr bgcolor="#CCCCFF">
+<div style="font-weight:bold;font-size: 17px">formatNumber</div>
+<div style="font-size: 15px">The formatNumber method returns formatted value of the passed number. If scuiDataType is passed, that is used first for finding the data type. Otherwise binding path is used. If no data type is given, only formatting is done.</div>
+<div style="font-size: 16px;font-weight:bold">Arguments</div>
+<table summary="" cellspacing="0" cellpadding="2" width="100%" border="1">
+<tr bgcolor="#D3D3D3">
+<th style="text-align:left">Name</th><th style="text-align:left">Type</th><th style="text-align:left">Description</th>
+</tr>
+<tr>
+<td>data</td><td>Number</td><td>The numeric value that needs to be formatted</td>
+</tr>
+<tr>
+<td>bindingPath</td><td>String</td><td>Binding path to find the data type</td>
+</tr>
+<tr>
+<td>scuiDataType</td><td>String</td><td>scuiDataType to find the data type</td>
+</tr>
+</table>
+<div></div>
+<div>Returns : String</div>
+</tr>
+<br>
+</table>
+</tr>
+</table>
+</body>
+</html>
